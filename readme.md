@@ -1,5 +1,8 @@
 # Drowsiness Detection OpenCV 😴 🚫 🚗
 
+### Results 📊
+
+<img src="https://github.com/kap6174/Drowsiness_Detection/blob/main/assets/drowsy.gif">
 
 This code can detect your eyes and alert when the user is drowsy.
 
@@ -37,11 +40,6 @@ It checks 20 consecutive frames and if the Eye Aspect ratio is less than 0.25, A
 #### Summing up
 
 <img src="https://github.com/kap6174/Drowsiness_Detection/blob/main/assets/eye3.jpg">
-
-
-### Results 📊
-
-<img src="https://github.com/kap6174/Drowsiness_Detection/blob/main/assets/drowsy.gif">
 
 
 ### Execution 🐉
