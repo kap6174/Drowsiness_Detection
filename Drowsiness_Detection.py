@@ -1,5 +1,7 @@
 from scipy.spatial import distance
 from imutils import face_utils
+# from playsound import playsound
+from pygame import mixer
 import imutils
 import dlib
 import cv2
@@ -14,6 +16,9 @@ def eye_aspect_ratio(eye):
 	
 thresh = 0.25
 frame_check = 20
+mixer.init(44100,-16,2,4096)
+sound = mixer.Sound("alarm.mp3")
+sound.set_volume(0.5)
 detect = dlib.get_frontal_face_detector()
 predict = dlib.shape_predictor("models/shape_predictor_68_face_landmarks.dat")# Dat file is the crux of the code
 
@@ -42,6 +47,8 @@ while True:
 			flag += 1
 			print (flag)
 			if flag >= frame_check:
+				# playsound("alarm.wav")
+				sound.play()
 				cv2.putText(frame, "****************ALERT!****************", (10, 30),
 					cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 				cv2.putText(frame, "****************ALERT!****************", (10,325),
